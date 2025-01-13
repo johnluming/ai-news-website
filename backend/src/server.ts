@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ai-news')
 app.use('/news', newsRoutes);
 
 // Serve static files from the React app
-const distPath = path.join(__dirname, '..', '..', '..', 'ai-news-website', 'dist');
+const distPath = path.join(__dirname, '..', '..', 'dist');
 console.log('Static files path:', distPath);
 app.use(express.static(distPath));
 
